@@ -12,6 +12,12 @@
 
 .body {
 	background-color: #f2f2f2;
+	font-family: raleway;
+	color: #333;
+}
+
+li img {
+	vertical-align: bottom;
 }
 
 .header {
@@ -22,39 +28,13 @@
 	z-index: 100;
 }
 
-.fa {
-	padding: 15px;
-}
-
 .fa-bolt {
 	color: gray;
+	padding: 15px;
 }
 
 .fa-4x {
 	float: left;
-}
-
-.hum {
-	display: inline-block;
-	width: 100%;
-}
-
-#humberger {
-	display: none;
-	padding: 10px;
-	margin: 20px;
-	border: 1px solid #ddd;
-	border-radius: 4px;
-	float: right;
-}
-
-#humberger div {
-	display: block;
-	height: 4px;
-	width: 24px;
-	background-color: #ddd;
-	margin: 3px 6px;
-	border-radius: 2px;
 }
 
 .nav-input {
@@ -74,8 +54,14 @@
 	border: none;
 }
 
+.container {
+	width: 100%;
+	height: 30px;
+}
+
 .main-title-box {
-	margin: 250px;
+	padding: 250px;
+	margin-top: 96px;
 	text-align: center;
 }
 
@@ -98,22 +84,22 @@
 	padding-top: 50px;
 	color: #fff;
 	background-color: #74cfae;
-	margin-bottom: 60px;
 }
 
 .second-mini-box {
-	display: table;
+	display: inline-block;
 }
 .we-can-img {
-	display: table-cell;
+	display: inline-block;
 	position: relative;
 }
 
 .second-text-box {
-	width: 800px;
-	display: table-cell;
+	width: 700px;
+	display: inline-block;
+	margin: 50px 0 0 150px;
 	line-height: normal;
-	vertical-align: middle;
+	vertical-align: top;
 }
 
 .second-title {
@@ -123,9 +109,11 @@
 .second-text {
 	margin-top: 35px;
 	font-size: 20px;
+	padding: 0 15px 30px;
 }
 
 .third-box {
+	margin-top: 60px;
 	text-align: center;
 }
 
@@ -133,33 +121,41 @@
 	font-size: 24px;
 }
 
-.top-photo {
-	display: table;
+.photo-box {
+	/*display: inline-block;*/
 	margin-top: 40px;
 }
+
 .photo {
-	display: table-cell;
+	display: inline-block;
 	margin: 40px 0 0 100px;
-	float: left;
+	opacity: 0.7;
 }
 
-.photo1,.photo4 {
-	margin-left: 50px;
+.photo:hover{
+	opacity: 1;
+}
+
+.photo-list > li:nth-child(-n+3) {
+	margin-top: 0;
+}
+
+.photo-list > li:nth-child(3n+1) {
+	margin-left: 0;
 }
 
 .third-bottom-box {
+	display: inline-block;
 	margin-top: 50px;
 }
 
 .third-text {
-	width: 540px;
+	width: 500px;
 	line-height: normal;
 	display: inline-block;
 }
 
 .mail-button {
-	position: relative;
-	top: -40px;
 	display: inline-block;
 	font-size: 12px;
 	padding: 14px 20px;
@@ -167,6 +163,8 @@
 	color: #fff;
 	background-color: #74cfae;
 	border-radius: 5px;
+	border: none;
+	vertical-align: top;
 }
 
 .skill-box {
@@ -188,7 +186,7 @@
 .circle {
 	display: table-cell;
 	float: left;
-	margin: 70px 0px 100px 180px;
+	margin: 70px 0 100px 180px;
 }
 
 .circle:first-child {
@@ -200,10 +198,10 @@
 }
 
 .sns-box {
-	padding: 200px;
+	padding: 200px 0;
 }
 
-.sns-img {
+.sns-list {
 	display: table;
 }
 
@@ -231,35 +229,37 @@
 }
 
 .footer-text {
+	padding: 30px 15px;
 	float: right;
+}
+
+.fa-heart {
+	padding: 3px;
 }
 
 @media screen and (min-width: 767px) and (max-width: 1199px) {
 
-.main-title {
-	white-space: ;
+.main-title-box {
+	padding: 250px 0;
 }
 
-#humberger {
+.humberger {
 	display: none;
 }
 
 .we-can-img {
-	margin: 50px 0 20px 0px;
+	margin: 50px 0 20px 0;
 	display: block;
 }
 
 .second-text-box {
 	width: 100%;
+	margin: 0;
 	margin-bottom: 25px;
 	display: block;
 }
 
-li img {
-	vertical-align: bottom;
-}
-
-.top-photo {
+.photo-list {
 	display: block;
 }
 
@@ -269,14 +269,14 @@ li img {
 	float: none;
 }
 
-.photo4 {
+.photo-list > li:nth-child(4) {
 	margin-top: 80px;
 }
 
 .circle {
 	float: none;
 	display: block;
-	margin: 88px 0px;
+	margin: 88px 0;
 }
 
 .third-text {
@@ -299,11 +299,7 @@ li img {
 }
 
 .main-title-box {
-	margin: 200px 0 130px 0 ;
-}
-
-.hum {
-	width: 100%;
+	padding: 160px 0 130px;
 }
 
 .header-right {
@@ -316,14 +312,8 @@ li img {
 	text-align: left;
 }
 
-.hum-inner {
-	width: 588px;
-	height: 50px;
-}
-
 .nav-input:checked + .header-right {
 	display: block;
-
 }
 
 .humberger {
@@ -342,6 +332,15 @@ li img {
 	margin: 7px 1px;
 }
 
+.second-box {
+	display: block;
+}
+
+.second-text-box {
+	margin: 0;
+	width: 100%;
+}
+
 .second-mini-box {
 	display: block;
 }
@@ -350,9 +349,9 @@ li img {
 	display: block;
 }
 
-.top-photo {
+.photo-list {
 	display: block;
-	margin-top: 0 ;
+	margin-top: 0;
 }
 
 .photo {
@@ -365,18 +364,14 @@ li img {
 	margin-top: 40px;
 }
 
-.photo4 {
+.photo-list > li:nth-child(4) {
 	margin-top: 80px;
 }
 
 .circle {
 	display: block;
-	margin: 70px 0px;
+	margin: 70px 0;
 	float: none;
-}
-
-li img {
-	vertical-align: bottom;
 }
 
 .third-text {
@@ -384,18 +379,17 @@ li img {
 }
 
 .mail-button {
-	top: 30px;
-	right: 50px;
+	margin: 40px 0 0;
 }
 
 .sns-box {
 	padding: 0;
 }
 
-.sns-img {
+.sns-list {
 	display: block;
 	padding: 0 15px;
-	margin: 50px 0px;
+	margin: 50px 0;
 }
 
 .sns {
